@@ -5,24 +5,34 @@ body {
 	font-family: 'Alegreya Sans', sans-serif;
 	overflow-x: hidden;
 }
-.content{
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#content{
   position: relative;
 }
-.content::after{
+#hover{
   position: absolute;
   top: 0;
   left: 0;
   z-index: 2;
-  content: " ";
   height: 100vh;
+  display: none;
   width: 100vw;
-  background-color: rgba(17, 17, 17, 0.541);
+  background-color: rgba(17, 17, 17, 0.411);
+  transition: 2s;
+}
+.show{
+  display: block !important;
+  /* transition: 5s ease-in; */
 }
 .nav {
 	height: 100%;
 	width: 0;
 	position: fixed;
-	z-index: 1;
+	z-index: 5;
 	top: 0;
 	right: 0;
 	background-color: #111;
